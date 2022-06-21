@@ -8,9 +8,8 @@ import 'package:todo/shared/cubit/cubit.dart';
 void main() {
   BlocOverrides.runZoned(
     () {
-AppCubit();  
-
-  },
+      AppCubit();
+    },
     blocObserver: MyBlocObserver(),
   );
   runApp(const MyApp());
@@ -23,15 +22,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-BlocProvider<AppCubit>(create: (context) => AppCubit()..createDataBase())
-
+        BlocProvider<AppCubit>(
+            create: (context) => AppCubit()..createDataBase())
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         home: HomeLayout(),
       ),
     );
   }
 }
-

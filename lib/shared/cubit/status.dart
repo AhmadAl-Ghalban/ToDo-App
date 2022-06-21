@@ -9,7 +9,6 @@ class AppChangebottomNavbarState extends AppStates{
 
 
 }
-
 class AppCreateDataBaseState extends AppStates{
 
 
@@ -31,7 +30,13 @@ class AppGetDataBaseLoadingState extends AppStates{
   
 }
 class AppChangebottomSheetState extends AppStates{
+  
 
 
   
+}
+class AppUpdataDataState extends AppStates{
+}
+class AppDeleteDataState extends AppStates{
+
 }
